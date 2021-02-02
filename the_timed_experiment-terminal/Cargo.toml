@@ -1,0 +1,19 @@
+[package]
+authors = ["Luctius Invictus <luctius@luctius@gmail.com>"]
+repository = "https://github.com/luctius/the_timed_experiment"
+edition = "2018"
+name = "the_timed_experience-terminal"
+version = "0.1.0"
+license = "MIT OR Apache-2.0"
+build = "build.rs"
+
+[[bin]]
+name = "tte"
+test = false
+bench = false
+path = "src/main.rs"
+
+[dependencies]
+structopt = "0.3" # Parsing commandline arguments
+crossterm = "*"
+the_timed_experiment-lib={ version="*", path="../the_timed_experiment-lib" }
